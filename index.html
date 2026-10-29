@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bloom for You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;1,500&family=Karla:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="sty.css">
+</head>
+<body class="intro-active">
+<section class="intro-screen" id="introScreen" aria-label="Welcome">
+  <div class="intro-copy">
+    <p class="intro-kicker">A little something for you</p>
+    <h1>For you</h1>
+  </div>
+  <button class="envelope" id="openEnvelope" type="button" aria-label="Open your envelope">
+    <span class="envelope-back"></span>
+    <span class="envelope-letter"><span>With love</span><i></i></span>
+    <span class="envelope-flap"></span>
+    <span class="envelope-front"></span>
+    <span class="envelope-seal" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.4C.9 8 3 4.5 6.4 4.5c2 0 3.6 1 4.6 2.6l1 1.5 1-1.5c1-1.6 2.6-2.6 4.6-2.6 3.4 0 5.5 3.5 4 7.1C19.5 16.4 12 21 12 21z"/></svg>
+    </span>
+  </button>
+  <p class="intro-hint">Tap to open</p>
+</section>
+<div class="drift" id="drift" aria-hidden="true"></div>
+
+<main class="page" id="pageContent" inert>
+  <section class="stage" aria-label="A bouquet of pink tulips.">
+    <div class="scene">
+      <div class="floor"></div>
+      <div class="tilt" id="tilt">
+        <div class="bouquet" id="bouquet">
+          <div class="paper back"></div>
+          <div class="paper front"></div>
+          <div class="bow"><i class="tail-l"></i><i class="tail-r"></i><i class="loop-l"></i><i class="loop-r"></i><i class="knot"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="note">
+    <p class="eyebrow">A little something for you</p>
+    <h1>I'll choose you every single day.</h1>
+    <p class="lead">Every day, I'll choose you, even on the days when we argue or fight. No matter how difficult things get, I'll still choose you.
+
+Love doesn't feel the same every day. Sometimes, the intensity, excitement, and butterflies might not be as strong as they used to be. There will be times when we fight, get angry, or feel hurt. But even through all of that, you're still the one I'll choose.
+
+I'm sorry for all the problems I've caused. I know I make mistakes, but please know that I love you so much, and I still want you to be the person I share my days with, even when things aren't easy.
+
+I love you so much.</p>
+    <p class="sign">Forever yours
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.4C.9 8 3 4.5 6.4 4.5c2 0 3.6 1 4.6 2.6l1 1.5 1-1.5c1-1.6 2.6-2.6 4.6-2.6 3.4 0 5.5 3.5 4 7.1C19.5 16.4 12 21 12 21z"/></svg>
+    </p>
+
+    <div class="photo-block">
+      <button class="frame" id="frame" type="button" aria-expanded="false" aria-haspopup="dialog" aria-label="Open the floating photo and message.">
+        <span class="photo">
+          <span class="holder" id="holder">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+            Your photo goes here
+          </span>
+          <img id="userPhoto" alt="Your photo" hidden>
+          <span class="reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.4C.9 8 3 4.5 6.4 4.5c2 0 3.6 1 4.6 2.6l1 1.5 1-1.5c1-1.6 2.6-2.6 4.6-2.6 3.4 0 5.5 3.5 4 7.1C19.5 16.4 12 21 12 21z"/></svg>
+            <span class="msg">You are my favorite person in every photo, every place and every day. I love you more than words can hold.</span>
+          </span>
+        </span>
+        <span class="caption"><span class="pointer">Click the photo</span><span class="touch">Tap the photo</span></span>
+      </button>
+      <dialog class="photo-popup" id="photoPopup" aria-label="Photo of us">
+        <button class="popup-close" id="closePhotoPopup" type="button" aria-label="Close photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <span class="photo popup-photo">
+          <span class="holder" id="popupHolder">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+            Your photo goes here
+          </span>
+          <img id="popupPhoto" alt="Your photo" hidden>
+        </span>
+        <p class="popup-message">You are my favorite person in every photo, every place and every day. I love you more than words can hold.</p>
+      </dialog>
+    </div>
+  </section>
+</main>
+
+<audio id="bgMusic" src="araw_arawbg.mp3" preload="none"></audio>
+<script src="scpt.js"></script>
+</body>
+</html>
